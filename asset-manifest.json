@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/pognali-typescript/static/css/main.0725991d.css",
+    "main.css": "/pognali-typescript/static/css/main.3372d06a.css",
     "main.js": "/pognali-typescript/static/js/main.140a8dcf.js",
     "static/media/heromain-bg-desktop@2x.png": "/pognali-typescript/static/media/heromain-bg-desktop@2x.48f7bf656138d18999a0.png",
     "static/media/heromain-bg-desktop.png": "/pognali-typescript/static/media/heromain-bg-desktop.26a02ae780953a3b35fc.png",
@@ -40,11 +40,11 @@
     "static/media/plus.svg": "/pognali-typescript/static/media/plus.c4adde7da88dcb7d700e.svg",
     "static/media/minus.svg": "/pognali-typescript/static/media/minus.e3f6eab92b14f30452b4.svg",
     "static/media/arrow-step.svg": "/pognali-typescript/static/media/arrow-step.e0abf5757f7eb0d78834.svg",
-    "main.0725991d.css.map": "/pognali-typescript/static/css/main.0725991d.css.map",
+    "main.3372d06a.css.map": "/pognali-typescript/static/css/main.3372d06a.css.map",
     "main.140a8dcf.js.map": "/pognali-typescript/static/js/main.140a8dcf.js.map"
   },
   "entrypoints": [
-    "static/css/main.0725991d.css",
+    "static/css/main.3372d06a.css",
     "static/js/main.140a8dcf.js"
   ]
 }
