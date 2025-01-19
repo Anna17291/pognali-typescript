@@ -1,6 +1,6 @@
 {
   "name": "intern-pognali-3-2",
-  "homepage": "https://htmlonelove.github.io/intern-pognali-3-2/",
+  "homepage": "https://Anna17291.github.io/pognali-typescript/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -39,6 +39,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "rm -rf build && npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
