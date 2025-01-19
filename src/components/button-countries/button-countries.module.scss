@@ -3,7 +3,6 @@
 
 .headerbutton {
   content: "Фильтрация по странам:";
-
   height: fit-content;
   width: fit-content;
   top: 0;
@@ -21,6 +20,7 @@
   position: relative;
   letter-spacing: -0.1px;
   font-family: inherit;
+  transition: 0.3s ease;
 
   @include vp-1023 {
     padding-left: 2px;
@@ -73,10 +73,23 @@
       z-index: 2;
       text-transform: uppercase;
       font-family: inherit;
+      transition: 0.3s ease;
 
       @include vp-767 {
         display: none;
       }
     }
+
+    &:hover,
+    &:focus-visible {
+      color: #192144;
+      opacity: 0.3;
+    }
+  }
+
+  &:hover,
+  &:focus-visible {
+    color: #192144;
+    opacity: 0.3;
   }
 }
