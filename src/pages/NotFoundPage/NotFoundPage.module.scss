@@ -1,0 +1,19 @@
+@import '../../styles/variables.scss';
+
+.text {
+  font-size: 20px;
+  line-height: 34px;
+  text-align: center;
+}
+
+.link {
+  font-weight: 700;
+  color: $primary-color;
+}
+
+.title {
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  color: $secondary-color;
+}

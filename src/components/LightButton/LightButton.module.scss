@@ -1,0 +1,31 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.lightButton {
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #1d2e5b;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  background-color: #dfe3f0;
+  width: 618px;
+  height: 60px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  display: none;
+
+  @include vp-1023 {
+    display: flex;
+  }
+
+  @include vp-767 {
+    border-radius: 20px;
+    width: 100%;
+    height: 40px;
+    font-weight: 500;
+    letter-spacing: 0;
+  }
+}

@@ -1,0 +1,26 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.block {
+  margin-bottom: 21px;
+  min-width: 214px;
+  max-width: 214px;
+
+  @include vp-1279 {
+    min-width: 0;
+  }
+
+  @include vp-1023 {
+    display: none;
+  }
+
+  div {
+    cursor: pointer;
+
+    &:hover,
+    &:focus-visible {
+      color: #1D2E5B;
+      font-weight: 500;
+    }
+  }
+}

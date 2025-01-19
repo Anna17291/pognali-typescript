@@ -1,0 +1,87 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.continents {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  @include vp-1023 {
+    min-width: 379px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    max-width: 100%;
+    min-width: 100%;
+    padding-left: 26px;
+    padding-top: 10px;
+  }
+
+  li {
+    &:not(:last-of-type) {
+      margin-right: 25px;
+      height: fit-content;
+
+      @include vp-1023 {
+        margin-right: 19px;
+      }
+
+      @include vp-767 {
+        margin-right: 0;
+        margin-bottom: 3px;
+      }
+    }
+
+    &:nth-child(2) {
+      @include vp-1023 {
+        margin-right: 25px;
+      }
+
+      @include vp-767 {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.button__continent {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #192144;
+  opacity: 0.3;
+  text-transform: uppercase;
+  border: 0;
+  background-color: inherit;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+
+  &:not(:last-of-type) {
+    margin-right: 25px;
+  }
+
+  @include vp-767 {
+    max-width: 100%;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  &:hover,
+  &:focus-visible {
+    color: #1D2E5B;
+    opacity: 1;
+  }
+}
+
+.block {
+  cursor: pointer;
+
+  div {
+    cursor: pointer;
+  }
+}

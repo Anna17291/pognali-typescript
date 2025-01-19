@@ -1,0 +1,12 @@
+.UseResizeHook {
+    display: flex;
+    width: calc(100vw / 1.7);
+    flex-direction: column;
+    gap: 5px;
+    margin: 0 auto;
+    margin-top: -350px;
+
+    p {
+        margin: 0;
+    }
+}

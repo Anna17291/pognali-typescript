@@ -1,0 +1,100 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.countries {
+  width: 100%;
+  padding: 0 0 40px;
+  box-sizing: border-box;
+  border: 0;
+  font-family: inherit;
+
+  @include vp-1023 {
+    padding: 5px 0 0 0;
+  }
+
+  @include vp-767 {
+    padding: 33px 0 25px 0;
+    box-sizing: border-box;
+    background-color: #E2E5F2;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-bottom: 21px;
+    min-height: 55px;
+    margin-top: -21px;
+  }
+}
+
+.header {
+  grid-column: 1/6;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  padding: 30px 80px;
+  box-sizing: border-box;
+
+  @include vp-1023 {
+    grid-column: 1/7;
+    padding: 30px 52px 30px 72px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    padding: 0 25px 2px;
+  }
+}
+
+.openclose {
+  @include vp-1023 {
+    order: 5;
+    margin-left: auto;
+    height: 0;
+  }
+
+  @include vp-767 {
+    order: 0;
+    margin: 0;
+  }
+}
+
+.closebutton {
+  display: none;
+
+  @include vp-1023 {
+    display: block;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #192144;
+    text-transform: uppercase;
+    border: 0;
+    background-color: inherit;
+    cursor: pointer;
+    position: relative;
+    padding-right: 30px;
+    margin-left: auto;
+    font-family: inherit;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 30px;
+      height: 3px;
+      background-color: #192144;
+      top: 40%;
+      right: 0;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 30px;
+      height: 3px;
+      background-color: #192144;
+      top: 40%;
+      right: 0;
+      transform: rotate(-45deg);
+    }
+  }
+}

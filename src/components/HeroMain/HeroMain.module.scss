@@ -1,0 +1,89 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.heromain__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 742px;
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    background-color: $chambray-color;
+    margin: 0;
+    z-index: 1;
+
+    @include vp-768 {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+        height: 906px;
+    }
+}
+
+.heromain__traveller {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    height: 640px;
+    right: 215px;
+
+    @include vp-1183 {
+        right: calc(215px - (1184px - 100vw));
+    }
+
+    @include vp-1023 {
+        right: 55px;
+    }
+
+    @include vp-999 {
+        right: 55px;
+        bottom: 0;
+        height: 530px;
+    }
+
+    @include vp-479 {
+        height: 255px;
+    }
+}
+
+.heromain__slogan {
+    @include primary-bold(70px, 70px);
+
+    display: flex;
+    width: 519px;
+    position: absolute;
+    top: 200px;
+    left: 72px;
+    text-transform: uppercase;
+    color: $secondary-background-color;
+    margin: 0;
+    font-variant: all-small-caps;
+    flex-wrap: wrap;
+
+    @include vp-1023 {
+        @include primary-bold(60px, 70px);
+        width: 433px;
+        text-transform: none;
+        font-variant: normal;
+    }
+
+    @include vp-999 {
+        top: calc(200px - ((1000px - 100vw)/5.524));
+    }
+
+    @include vp-767 {
+        top: 158px;
+        left: calc(72px - ((768px - 100vw)/6.8));
+    }
+
+    @include vp-479 {
+        @include primary-bold(36px, 40px);
+        width: 255px;
+        top: 158px;
+        left: 40px;
+    }
+
+    @include vp-320 {
+        left: 25px;
+    }
+}

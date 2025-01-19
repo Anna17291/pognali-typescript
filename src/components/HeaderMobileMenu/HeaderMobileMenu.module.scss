@@ -1,0 +1,59 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.nav {
+    display: none;
+
+    @include vp-1023 {
+        display: block;
+        position: absolute;
+        width: calc(100% - 80px);
+        z-index: 10;
+        left: 0;
+        top: 0;
+        padding: 0 40px;
+        background-color: $secondary-background-color;
+        animation-duration: 0.8s;
+        animation-name: appearing;
+        animation-fill-mode: forwards;
+
+        &--hidden {
+            display: none;
+        }
+    }
+
+    @include vp-479 {
+        padding: 0 25px;
+        width: calc(100% - 50px);
+    }
+}
+
+@keyframes appearing {
+    0% {
+        margin-top: -20px;
+    }
+  
+    50% {
+        margin-top: 0;
+    }
+}
+
+.HeaderMobileMenu__contacts {
+    display: flex;
+    width: 270px;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.nav .social {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 29px;
+    max-width: 100%;
+
+    svg {
+        width: 45px;
+        height: 45px;
+    }
+}
+

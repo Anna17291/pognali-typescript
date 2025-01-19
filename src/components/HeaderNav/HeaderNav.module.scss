@@ -1,0 +1,128 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.nav-list {
+    position: relative;
+    display: flex;
+    max-width: calc(100% - 310px - 168px);
+    margin: 0;
+    padding: 0;
+    padding-top: 15px;
+    padding-left: 145px;
+    gap: 18px;
+    list-style-type: none;
+    flex-wrap: wrap;
+
+    &::before {
+        content: "";
+        display: flex;
+        position: absolute;
+        left: 40px;
+        top: 50%;
+        width: 60px;
+        max-width: 60px;
+        height: 2px;
+        background-color: $secondary-background-color;
+
+        @include vp-1023 {
+            display: none;
+        }
+    }
+
+    @include vp-1023 {
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        padding-top: 105px;
+        padding-bottom: 141px;
+        gap: 0;
+    } 
+}
+
+.nav-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @include vp-479 {
+        justify-content: flex-start;
+    }
+}
+
+.nav-subtitle-link {
+    @include primary-medium(20px, 20px);
+
+    display: block;
+    margin: 0;
+    padding: 0 0 10px;
+    color:  $secondary-background-color;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    @include vp-1023 {
+        @include primary-medium(30px, 43px);
+        color:  $midnight-express-color;
+        transition: $trans-default;
+
+        &:hover,
+        &:focus-visible {
+            opacity: 0.6;
+        }
+
+        &:active {
+            opacity: 0.3; 
+        }
+    }
+}
+
+/* Effect 4: bottom border enlarge */
+.nav-subtitle-link {
+	padding: 0 0 10px;
+}
+
+.nav-subtitle-link::after {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background: #fff;
+	content: '';
+	opacity: 0;
+	-webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+	-moz-transition: height 0.3s, opacity 0.3s, -moz-transform 0.3s;
+	transition: height 0.3s, opacity 0.3s, transform 0.3s;
+	-webkit-transform: translateY(-10px);
+	-moz-transform: translateY(-10px);
+	transform: translateY(-10px);
+}
+
+.nav-subtitle-link:hover::after,
+.nav-subtitle-link:focus-visible::after {
+	height: 5px;
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	transform: translateY(0px);
+}
+
+.nav-subtitle-link:focus {
+    outline: none;
+}
+
+.nav-subtitle-link:active::after {
+	height: 5px;
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	transform: translateY(0px);
+    opacity: 0;
+}
+
+.nav-subtitle-link:active {
+    opacity: 0.3;
+}

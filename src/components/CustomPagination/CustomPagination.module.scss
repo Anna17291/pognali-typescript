@@ -1,0 +1,134 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.pagination {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 30px 25px 30px;
+  background-color: #fff;
+  border-radius: 20px;
+  width: 949px;
+  height: 100px;
+  margin-bottom: 66px;
+
+  @include vp-1023 {
+    width: 100%;
+    margin-top: -28px;
+    margin-bottom: 49px;
+    padding: 25px 26px 25px 28px;
+  }
+
+  @include vp-767 {
+    height: 51px;
+    margin-bottom: 34px;
+  }
+}
+
+.pageNumbers {
+  display: flex;
+  gap: 0;
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.pageButton {
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #1D2E5B;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pageButton:hover,
+.pageButton:focus {
+  opacity: 0.6;
+}
+
+.active {
+  background-color: #A8D2F4;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigationButtons {
+  display: flex;
+  gap: 17px;
+
+  @include vp-1023 {
+    gap: 13px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    justify-content: space-between;
+    position: relative;
+    padding: 0 27px;
+
+    &::after {
+      content: "";
+      width: 1px;
+      height: 51px;
+      background-color: #EDEFF6;
+      position: absolute;
+      top: -9px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+    }
+  }
+}
+
+.arrowButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.arrowButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.arrowLeft, .arrowRight {
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.arrowLeft {
+  border-width: 9px 9px 9px 0;
+  border-color: transparent #1D2E5B transparent transparent;
+}
+
+.arrowRight {
+  border-width: 9px 0 9px 9px;
+  border-color: transparent transparent transparent #1D2E5B;
+}

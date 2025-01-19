@@ -1,0 +1,339 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.form__wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 96px;
+    max-width: 1440px;
+    background-color:  $form-background-color;
+}
+
+:global {
+    .form__hashtag {
+        max-width: 732px;
+        flex-grow: 1;
+
+        @include vp-1023 {
+            width: 100%;
+        }
+    }
+}
+
+.form__destination {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    padding: 0 60px;
+    padding-top: 67px;
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 10;
+
+    @include vp-1023 {
+        padding: 0 75px;
+        flex-direction: column;
+        margin-bottom: 52px;
+    }
+
+    @include vp-767 {
+        padding: 0 26px;
+        height: auto;
+        margin-bottom:33px;
+    }
+}
+
+.form__destination::after {
+    content: '';
+    width: 100%;
+    max-width: 1440px;
+    height: 351px;
+    background-color: #192144;
+    border-radius: 0 0 59px 59px;
+    position: absolute;
+    left: 0;
+    top: -96px;
+    z-index: -1;
+
+    @include vp-767 {
+        height: 143px;
+        border-radius: 0 0 20px 20px;
+    }
+}
+
+.form__user {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 39px;
+    align-items: center;
+    margin-right: 78px;
+
+    @include vp-1023 {
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 100%;
+        margin-right: 0;
+        margin-top: 52px;
+        gap: 51px;
+    }
+
+    @include vp-767 {
+        padding: 0;
+        margin-top: 0;
+        gap: 18px 0;
+    }
+}
+
+:global(.form__change-photo) {
+    margin: 0 auto;
+    flex-basis: 100%;
+    width: 100%;
+}
+
+
+.form__steplist {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+    background-color: $pale-cornflower-blue-color;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    margin: 0;
+    padding: 0;
+    padding-top: 145px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 300px;
+
+    @include vp-1023 {
+        padding-left: 75px;
+        padding-right: 75px;
+    }
+}
+
+.form__step {
+    display: flex;
+    flex-direction: column;
+    border-radius: 60px;
+    background-color: $secondary-background-color;
+    padding: 100px 160px;
+
+    @include vp-1023 {
+        padding: 48px 40px 56px;
+        border-radius: 30px;
+    }
+}
+
+.travelform__step h3 {
+    @include vp-1023 {
+        margin-bottom: 70px;
+        word-break: normal;
+    }
+}
+
+.form__section {
+    @include primary-regular(40px, 44px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    min-height: 300px;
+}
+
+.one__wrapper {
+    display: grid;
+    grid-template-columns: 670px 225px;
+    gap: 40px;
+    padding-top: 30px;
+    padding-bottom: 33px;
+}
+
+.one__pluslist {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.one__checkbox {
+    display: flex;
+    padding-top: 47px;
+    width: 300px;
+}
+
+.one__plusitem {
+    @include primary-medium(20px, 18px);
+
+    display: flex;
+    gap: 35px;
+    align-items: center;
+    text-transform: uppercase;
+    color: $catalina-blue-color;
+    margin-right: auto;
+    flex-wrap: nowrap;
+}
+
+.one__plusdefinition {
+    display: flex;
+    min-width: 192px;
+    margin-right: -6px;
+    color: $catalina-blue-color;
+    flex-wrap: wrap;
+}
+/// как в travelForm
+.form__textarea {
+    font-size: 20px;
+    line-height: 20px;
+    color: rgb(68, 68, 68);
+    width: 730px;
+    height: 142px;
+    border-radius: 4px;
+    border: 1px solid #CBCED9;
+    background-color: transparent;
+    padding: 26px 25px;
+    box-sizing: border-box;
+    resize: none;
+    transition: all 0.3s ease-in-out;
+
+    &::placeholder {
+        color: rgba(68, 68, 68, 0.3);
+    }
+
+    &:hover,
+    &:focus {
+        border-color: #959BB2;
+    }
+
+    @include vp-1023 {
+        width: 500px;
+        height: 140px;
+        padding: 18px;
+    }
+}
+
+.form__inner {
+    margin-bottom: 52px;
+    position: relative;
+}
+
+.form__inner:first-of-type {
+    margin-top: 52px;
+}
+
+.form__inner:before {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #1D2E5B;
+    position: absolute;
+    left: 769px;
+    top: 14px;
+
+    @include vp-1023 {
+        left: initial;
+        right: 0;
+    }
+}
+
+.form__inner:after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 257px;
+    background-color: #1D2E5B;
+    position: absolute;
+    left: 775px;
+    top: 28px;
+
+    @include vp-1023 {
+        left: initial;
+        right: 6px;
+    }
+}
+
+.form__inner:last-of-type::after {
+    display: none;
+}
+
+.form__inner img {
+    display: block;
+    width: 70px;
+    height: 47px;
+    border-radius: 5px;
+    background-color: #73777C;
+    position: absolute;
+    top: 0;
+    left: 815px;
+
+    @include vp-1023 {
+        left: initial;
+        right: 39px;
+    }
+}
+
+.form__footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form__footer button[type=submit] {
+    padding: 28px 130px 28px 34px;
+    position: relative;
+}
+
+.form__footer button[type=submit]::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 10px solid #1D2E5B;
+    position: absolute;
+    top: calc(50% - 3px);
+    right: 37px;
+    transform: translateX(-50%);
+    transition: all 0.3s ease-in-out;
+}
+
+.form__footer button[type=submit]:active::after {
+    border-left-color: rgb(29,46,91, 0.3);
+}
+
+.form__back {
+    font-size: 24px;
+    line-height: 22px;
+    font-weight: 700;
+    color: #1D2E5B;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    position: relative;
+
+    &:hover,
+    &:focus {
+        opacity: 0.7;
+    }
+
+    &:active {
+        opacity: 0.3;
+    }
+}
+
+.form__back::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 10px solid #1D2E5B;
+    position: absolute;
+    top: calc(50% - 5px);
+    left: -20px;
+    transform: translateX(-50%);
+}

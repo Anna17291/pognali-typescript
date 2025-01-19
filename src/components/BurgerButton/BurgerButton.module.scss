@@ -1,0 +1,42 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.button {
+    display: none;
+
+    @include vp-1023 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        box-sizing: border-box;
+        border: none;
+        cursor: pointer;
+        background-color: transparent;
+        transition: $trans-default;
+        margin: 0;
+        margin-left: auto;
+    
+        &--hidden {
+            display: none;
+        }
+    }
+}
+
+.button:hover {
+    opacity: 0.7;
+}
+
+.button:focus-visible {
+    opacity: 0.7;
+    outline: none;
+}
+
+.button:focus {
+    outline: none;
+}
+
+.button:active {
+    opacity: 0.5;
+}

@@ -1,0 +1,12 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.walk {
+  width: 22px;
+  height: 24px;
+
+  @include vp-767 {
+    width: 13px;
+    height: 17px;
+  }
+}

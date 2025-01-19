@@ -1,0 +1,30 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+
+.button {
+    display: none;
+
+    @include vp-1023 {
+        display: flex;
+        margin-left: auto;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        box-sizing: border-box;
+        border: none;
+        cursor: pointer;
+        background-color: transparent;
+
+        &--hidden {
+            display: none;
+        }
+    }
+}
+
+.icon {
+    width: 19px;
+    height: 18px;
+    color: $primary-color;
+}

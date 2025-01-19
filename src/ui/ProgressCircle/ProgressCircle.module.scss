@@ -1,0 +1,80 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.progressWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.progressCircle {
+  transform: rotate(-90deg);
+}
+
+.circleBackground {
+  transition: stroke-dashoffset 0.5s ease;
+}
+
+.circleProgress {
+  transition: stroke-dashoffset 0.5s ease;
+}
+
+.progressWrapper .progressText {
+  position: absolute;
+  top: calc(50% - 8px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 38px;
+  line-height: 38px;
+  font-weight: 700;
+  color: #ffffff;
+
+  @include vp-1023 {
+    color: #161C35;
+  }
+
+  @include vp-767 {
+    top: calc(50% - 12px);
+  }
+}
+
+.progressWrapper .progressText::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 53px;
+  height: 1px;
+  background-color: #444444;
+}
+
+.progressWrapper .progressText::after {
+  content: 'level';
+  font-size: 18px;
+  line-height: 18px;
+  color: #ffffff;
+  position: absolute;
+  bottom: -21px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include vp-1023 {
+    color: #444444;
+  }
+}
+
+:global(.form__progress) {
+  align-self: start;
+  margin-top: 42px;
+
+  @include vp-1023 {
+    margin-top: 0;
+    line-height: 0;
+  }
+
+  @include vp-767 {
+    transform: scale(1.06);
+    margin-top: 3px;
+    margin-left: 19px;
+  }
+}

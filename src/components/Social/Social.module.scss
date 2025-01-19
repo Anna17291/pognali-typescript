@@ -1,0 +1,37 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.social__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+    list-style-type: none;
+    max-width: 190px;
+    flex-wrap: wrap;
+
+    @include vp-479 {
+        svg {
+            width: 45px;
+            height: 45px;
+        }
+    }
+}
+
+.social__link {
+    transition: $trans-default;;
+    display: flex;
+    img {
+        display: block;
+    }
+}
+
+.social__link:focus {
+    outline: none;
+}
+
+.social__link:focus-visible {
+    opacity: 0.6;
+}

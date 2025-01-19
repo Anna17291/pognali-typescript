@@ -1,0 +1,33 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    transform: translate(-14px, 0);
+}
+
+.wrapper img {
+    
+    animation-duration: 20s;
+    animation-name: rotation;
+    animation-iteration-count: infinite;
+
+    @include vp-767 {
+        width: 70px;
+        height: 65px;
+        transform: translate(-4px, 0);
+    }
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(10deg);
+    }
+
+    to {
+        transform: rotate(720deg);
+    }
+}

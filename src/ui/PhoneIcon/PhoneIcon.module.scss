@@ -1,0 +1,36 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.phoneicon {
+    display: block;
+}
+
+.phoneicon:focus { 
+    outline: none;
+}
+
+.phoneicon:hover,
+.phoneicon:focus-visible {
+
+    .phoneicon_circle {
+        fill: $picton-blue-color; 
+     }
+}
+
+.phoneicon:active {
+    .phoneicon_circle {
+        fill: $picton-blue-color; 
+     }
+
+     .phoneicon_path {
+         opacity: 0.3;
+     }
+}
+
+.phoneicon_circle {
+    transition: $trans-default;
+}
+
+.phoneicon_path {
+    transition: $trans-default;  
+}

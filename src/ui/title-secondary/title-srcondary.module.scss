@@ -1,0 +1,35 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #1D2E5B;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h2,
+h3 {
+  font-size: 36px;
+  line-height: 36px;
+  letter-spacing: -0.8px;
+  margin-bottom: 35px;
+
+  @include vp-767 {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0;
+  }
+}
+
+h4 {
+  font-size: 30px;
+}
+
+h5,
+h6 {
+  font-size: 24px;
+}

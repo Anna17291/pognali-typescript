@@ -1,0 +1,154 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.ways {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 98px 159px 103px 159px;
+  box-sizing: border-box;
+  border-radius: 58px;
+
+  ul {
+    margin-top: 0;
+  }
+}
+
+.field {
+  width: 100%;
+  z-index: 16;
+  position: relative;
+
+  &:nth-child(2) {
+    z-index: 15;
+  }
+
+  &:nth-child(3) {
+    z-index: 14;
+  }
+
+  &:nth-child(4) {
+    z-index: 13;
+  }
+
+  @include vp-767 {
+    position: relative;
+
+    &:not(:last-of-type)::before {
+      background-image: url("../../images/arrowdown.svg");
+      border: 0;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      position: absolute;
+      content: "";
+      right: 46px;
+      bottom: -25px;
+      width: 10px;
+      height: 20px;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  border-bottom: solid 1px #E1E3E9;
+  padding-bottom: 55px;
+}
+
+.name {
+  display: block;
+  width: 65%;
+  max-width: 475px;
+}
+
+.selects {
+  display: flex;
+  justify-content: space-between;
+
+  @include vp-767 {
+    padding-left: 1px;
+    padding-right: 1px;
+    margin-top: -3px;
+  }
+}
+
+.fields {
+  width: 100%;
+  padding-top: 62px;
+  box-sizing: border-box;
+  position: relative;
+  margin-bottom: 41px;
+
+  @include vp-1023 {
+    padding-top: 42px;
+    margin-bottom: 36px;
+  }
+
+  @include vp-767 {
+    padding-top: 0;
+    margin-bottom: 5px;
+    padding-right: 3px;
+  }
+
+  &::after {
+    width: 1px;
+    content: "";
+    position: absolute;
+    background-color: #E1E3E9;
+    right: 22.2%;
+    top: 0;
+    bottom: 0;
+
+    @include vp-1023 {
+      right: 26%;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+}
+
+.countries {
+  width: 22.5%;
+  max-width: 232px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 62px;
+  padding-left: 40px;
+  box-sizing: border-box;
+}
+
+.countries__list {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.countries__item {
+  position: relative;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 170px;
+
+  &:not(:last-of-type) {
+    margin-bottom: 6px;
+  }
+
+  &::before {
+    content: "";
+    background-color: #ffffff;
+    border: solid 1px #CBCED9;
+    border-radius: 50%;
+    position: absolute;
+    left: -49px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+  }
+}

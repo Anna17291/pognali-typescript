@@ -1,0 +1,36 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.mailicon {
+    display: block;
+}
+
+.mailicon:focus { 
+    outline: none;
+}
+
+.mailicon:hover,
+.mailicon:focus-visible {
+
+    .mailicon_circle {
+        fill: $picton-blue-color; 
+     }
+}
+
+.mailicon:active {
+    .mailicon_circle {
+        fill: $picton-blue-color; 
+     }
+
+     .mailicon_path {
+         opacity: 0.3;
+     }
+}
+
+.mailicon_circle {
+    transition: $trans-default;
+}
+
+.mailicon_path {
+    transition: $trans-default;  
+}

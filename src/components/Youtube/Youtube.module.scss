@@ -1,0 +1,54 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.youtube {
+    display: block;
+
+    @include vp-1023 {
+        width: 62px;
+        height: 62px;
+    }
+
+    @include vp-479 {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+.youtube:focus { 
+    outline: none;
+}
+
+.youtube:hover,
+.youtube:focus-visible {
+
+    .youcircle {
+        fill: $picton-blue-color; 
+     }
+}
+
+.youtube:active {
+    .youcircle {
+        fill: $picton-blue-color; 
+     }
+
+     .youpath {
+         opacity: 0.3;
+     }
+}
+
+.youcircle {
+    transition: $trans-default;
+}
+
+nav .youcircle {
+    transition: $trans-default;
+    
+    @include vp-1023 {
+       fill: transparent;
+    }
+}
+
+.youpath {
+    transition: $trans-default;  
+}

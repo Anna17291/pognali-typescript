@@ -1,0 +1,18 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.bicycle {
+  width: 25px;
+  height: 25px;
+
+  @include vp-1279 {
+    padding-right: 0px;
+    margin-bottom: 3px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 0;
+    width: 15px;
+    height: 17px;
+  }
+}

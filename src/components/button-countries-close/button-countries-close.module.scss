@@ -1,0 +1,51 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.headerbuttonclose {
+  height: fit-content;
+  width: fit-content;
+  top: 0;
+  left: 0;
+  background: url("../../images/filter.svg") no-repeat;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #192144;
+  text-transform: uppercase;
+  border: 0;
+  background-color: inherit;
+  cursor: pointer;
+  padding-left: 45px;
+  position: relative;
+  font-family: inherit;
+
+  @include vp-767 {
+    font-size: 10px;
+  }
+
+  div {
+    padding-left: 28px;
+  }
+
+  &::after {
+    @include vp-1023 {
+      display: block;
+      content: "свернуть";
+      text-transform: uppercase;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+      background-color: #E2E5F2;
+      left: 0;
+      background: url(../../images/icon-close-countries.svg) no-repeat #e2e5f2;
+      background-position: right 0 top 50%;
+      top: 0;
+      z-index: 2;
+
+      @include vp-767 {
+        display: none;
+      }
+    }
+  }
+}

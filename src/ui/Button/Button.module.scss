@@ -1,0 +1,100 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.button {
+    @include primary-medium(20px, 20px);
+
+    padding: 16px;
+    color: $main-color;
+    box-sizing: border-box;
+    background-color: $secondary-background-color;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+
+    &--base {
+        color: $primary-color;
+        border: 1px solid $primary-color;
+
+        &:hover {
+            color: $secondary-background-color;
+            background-color: $primary-color;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    &--contrast {
+        color: $secondary-background-color;
+        background-color: $primary-color;
+        border: none;
+
+        &:hover {
+            background-color: $additional-background-color;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    &--light {
+        color: $additional-text-color;
+        border: 1px solid $additinal-border-color;
+    }
+
+    &--neutral {
+        background-color: transparent;
+        border: none;
+    }
+
+    &--pale {
+        color: $main-color;
+        background-color: #F6F6F6;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &:hover {
+            background-color: #E8E8E9;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    &--dark {
+        color: $secondary-background-color;
+        background-color: $main-color;
+        border: none;
+
+        &:hover {
+            background-color: $primary-color;
+            transition: all 0.3s ease-in-out;
+            border: none;
+        }
+    }
+
+    &--heaven {
+        @include primary-bold(24px, 24px);
+
+        max-width: 286px;
+        padding: 29px 65px 27px 34px;
+        border-radius: 20px;
+        color: $catalina-blue-color;
+        background-color: $pale-cornflower-blue-color;
+        border: none;
+
+        &:hover {
+            background-color: $primary-color;
+            transition: all 0.3s ease-in-out;
+            border: none;
+        }
+
+        &:active {
+            background-color: #4D99D6;
+            color: rgb(29, 46, 91, 0.3);
+            transition: all 0.3s ease-in-out;
+            border: none;
+        }
+    }
+}
+
+.button>svg {
+    margin-right: .625rem;
+}

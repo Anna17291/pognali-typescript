@@ -1,0 +1,59 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.vk {
+    display: block;
+
+    @include vp-1023 {
+        width: 62px;
+        height: 62px;
+    }
+
+    @include vp-479 {
+        width: 45px;
+        height: 45px;
+
+        svg {
+            width: 26px;
+            height: 26px;
+        }
+    }
+}
+
+.vk:focus { 
+    outline: none;
+}
+
+.vk:hover,
+.vk:focus-visible {
+
+    .vkcircle {
+        fill: $picton-blue-color; 
+     }
+}
+
+.vk:active {
+    .vkcircle {
+        fill: $picton-blue-color; 
+     }
+
+     .vkpath {
+         opacity: 0.3;
+     }
+}
+
+.vkcircle {
+    transition: $trans-default;
+}
+
+nav .vkcircle {
+    transition: $trans-default;
+    
+    @include vp-1023 {
+       fill: transparent;
+    }
+}
+
+.vkpath {
+    transition: $trans-default;  
+}

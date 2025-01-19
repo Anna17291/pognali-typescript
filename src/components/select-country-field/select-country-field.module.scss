@@ -1,0 +1,270 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.but {
+  width: 100%;
+  height: 70px;
+  background-color: #ffffff;
+  border: solid 1px #CBCED9;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #1D2E5B;
+  text-transform: uppercase;
+  opacity: 1;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 25px 50px 25px 25px;
+  box-sizing: border-box;
+  letter-spacing: 2px;
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 24px;
+    height: 42px;
+    padding: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    border: 0;
+    padding: 0;
+  }
+
+  &:hover,
+  &:focus-visible {
+    border: solid 1px #959BB2;
+  }
+}
+
+.country {
+  @include vp-767 {
+    border: solid 1px #CBCED9;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 4px;
+    display: flex;
+    overflow: hidden;
+    align-items: flex-start;
+    padding: 10px 40px 10px 10px;
+    box-sizing: border-box;
+    letter-spacing: 0.2px;
+    font-weight: 500;
+  }
+}
+
+.open {
+  position: relative;
+  height: 70px;
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+
+  @include vp-767 {
+    height: 42px;
+    margin-right: 0;
+  }
+
+  .openbutton {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    background-image: url("../../images/arrow-back.svg");
+    border: 0;
+    opacity: 1;
+    color: #000;
+    top: 55%;
+    transform: translateY(-50%);
+    right: 25px;
+    cursor: pointer;
+
+    @include vp-767 {
+      background-size: 12px 12px;
+      background-repeat: no-repeat;
+      width: 11px;
+      height: 11px;
+      right: 15px;
+    }
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-right: 26.5%;
+
+  @include vp-1023 {
+    padding-right: 30.5%;
+  }
+
+  @include vp-767 {
+    margin-bottom: 22px;
+    position: relative;
+    padding: 0;
+  }
+
+  &::after {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    z-index: 2;
+    right: 22.2%;
+    top: 50%;
+    transform: translateY(-50%) translateX(50%);
+    border: solid 1px #CBCED9;
+    content: "";
+    box-sizing: border-box;
+
+    @include vp-1023 {
+      right: 26%;
+    }
+
+    @include vp-767 {
+      right: 53px;
+      width: 8px;
+      height: 8px;
+    }
+  }
+}
+
+.marker {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #1D2E5B;
+  z-index: 3;
+  margin-right: 33px;
+
+  @include vp-1023 {
+    margin-right: 19px;
+  }
+
+  @include vp-767 {
+    margin-right: 0;
+    width: 8px;
+    height: 8px;
+    margin-left: -5px;
+  }
+}
+
+.flagfield {
+  display: flex;
+  align-items: center;
+  width: 230px;
+  position: absolute;
+  left: 77.8%;
+  transform: translateX(-7px);
+  box-sizing: border-box;
+  z-index: 5;
+
+  @include vp-1023 {
+    width: 149px;
+    left: 74%;
+  }
+
+  @include vp-767 {
+    border: solid 1px #CBCED9;
+    width: 52px;
+    height: 42px;
+    border-radius: 4px;
+    right: -7px;
+    left: auto;
+    z-index: 3;
+  }
+}
+
+.flagfield img {
+  border-radius: 8px;
+
+  @include vp-767 {
+    width: 35px;
+    height: 24px;
+    margin: auto;
+    border-radius: 4px;
+  }
+}
+
+.buttonadd {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #EDEFF6;
+  color: #1D2E5B;
+  text-transform: uppercase;
+  font-weight: 500;
+  z-index: 4;
+  padding: 5px 50px 5px 25px;
+  box-sizing: border-box;
+  position: relative;
+  font-size: 20px;
+  line-height: 20px;
+  cursor: pointer;
+
+  @include vp-767 {
+    height: 42px;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 7px 50px 5px 11px;
+  }
+
+  &:hover,
+  &:focus-visible {
+    background-color: #DFE3F0;
+  }
+
+  &:hover::after,
+  &:focus-visible::after,
+  &:hover::before,
+  &:focus-visible::before {
+    opacity: 0.3;
+  }
+
+  &:active::before,
+  &:active::after {
+    opacity: 0.1;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 2px;
+    background-color: #000000;
+    opacity: 0.2;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include vp-767 {
+      width: 14px;
+      right: 15px;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 20px;
+    background-color: #000000;
+    opacity: 0.2;
+    right: 34px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include vp-767 {
+      height: 14px;
+      right: 21px;
+    }
+  }
+}

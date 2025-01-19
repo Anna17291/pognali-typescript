@@ -1,0 +1,100 @@
+/* Desktop first */
+
+@mixin vp-1439 {
+  @media (max-width: ($vp-1440 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-999 {
+  @media (max-width: ($vp-1000 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-1299 {
+  @media (max-width: ($vp-1300 - 1px)) {
+    @content;
+  }
+}
+
+
+@mixin vp-1279 {
+  @media (max-width: ($vp-1280 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-1183 {
+  @media (max-width: ($vp-1184 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-1023 {
+  @media (max-width: ($vp-1024 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-767 {
+  @media (max-width: ($vp-768 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-768 {
+  @media (max-width: ($vp-768)) {
+    @content;
+  }
+}
+
+@mixin vp-479 {
+  @media (max-width: ($vp-480 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-320 {
+  @media (max-width: ($vp-320)) {
+    @content;
+  }
+}
+
+
+@mixin vp-319 {
+  @media (max-width: ($vp-320 - 1px)) {
+    @content;
+  }
+}
+
+
+/* Onest --> Primary Font  (инфо из Style Guide) */
+
+@mixin primary-bold($font_size, $line_height) {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: $font_size;
+  line-height: $line_height;
+}
+
+@mixin primary-medium($font_size, $line_height) {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: $font_size;
+  line-height: $line_height;
+}
+
+@mixin primary-regular($font_size, $line_height) {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: $font_size;
+  line-height: $line_height;
+}
+
+@mixin primary-light($font_size, $line_height) {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: $font_size;
+  line-height: $line_height;
+}

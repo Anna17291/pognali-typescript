@@ -1,0 +1,54 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.telegram {
+    display: block;
+
+    @include vp-1023 {
+        width: 62px;
+        height: 62px;
+    }
+
+    @include vp-479 {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+.telegram:focus { 
+    outline: none;
+}
+
+.telegram:hover,
+.telegram:focus-visible {
+
+    .telecircle {
+        fill: $picton-blue-color; 
+     }
+}
+
+.telegram:active {
+    .telecircle {
+        fill: $picton-blue-color; 
+     }
+
+     .telepath {
+         opacity: 0.3;
+     }
+}
+
+.telecircle {
+    transition: $trans-default;
+}
+
+nav .telecircle {
+    transition: $trans-default;
+    
+    @include vp-1023 {
+       fill: transparent;
+    }
+}
+
+.telepath {
+    transition: $trans-default;  
+}

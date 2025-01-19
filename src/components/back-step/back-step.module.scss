@@ -1,0 +1,22 @@
+.backstep {
+  color: #1D2E5B;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  text-decoration: none;
+  position: relative;
+  padding-left: 33px;
+  margin-top: auto;
+  letter-spacing: -0.3px;
+  padding-bottom: 30px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url("../../images/arrow-step.svg");
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    left: 0;
+  }
+}

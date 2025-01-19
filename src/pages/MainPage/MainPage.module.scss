@@ -1,0 +1,47 @@
+.title {
+    text-align: center;
+}
+
+main {
+    background-color: #EDEFF6;
+}
+
+.main__countries {
+    display: flex;
+    list-style-type: none;
+    gap: 8px 8px;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: -600px;
+}
+
+.main__countries li img {
+    display: block;
+}
+
+.main__countries li * {
+    display: none;
+}
+
+
+.navigation__buttons {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 100px;
+    padding: 50px 0;;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}

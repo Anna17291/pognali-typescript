@@ -1,0 +1,405 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.blocks {
+  grid-column: 1/6;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  padding: 0 15px;
+
+  @include vp-1023 {
+    display: none;
+  }
+
+  &--mobile {
+    display: none;
+
+    @include vp-1023 {
+      grid-column: 1/6;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 84px 84px 84px 84px 84px;
+      padding-left: 3px;
+      padding: 3px 35px 0 0;
+      margin-bottom: 40px;
+    }
+
+    @include vp-767 {
+      padding-left: 26px;
+      margin-bottom: 15px;
+      padding-top: 150px;
+      column-gap: 0;
+      width: fit-content;
+      background-color: #e2e5f2;
+      grid-template-rows: 40px 40px 40px 40px 40px;
+    }
+  }
+}
+
+.popup__menu {
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.popup {
+  display: flex;
+  flex-direction: column;
+  right: 0;
+  top: 0;
+  left: 0;
+  z-index: 14;
+  background-color: #edeff6;
+  opacity: 1;
+  padding: 70px 0 60px 0;
+  max-width: 100%;
+  width: 100%;
+
+  @include vp-1023 {
+    padding: 57px 0 60px 0;
+  }
+
+  @include vp-767 {
+    padding: 0;
+    background-color: #e2e5f2;
+  }
+}
+
+.popup__header {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 72px;
+  padding: 0 20px;
+  background-color: #edeff6;
+  opacity: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  padding: 30px 80px;
+  font-family: inherit;
+
+  @include vp-1023 {
+    flex-direction: row-reverse;
+    margin-bottom: 40px;
+    padding: 30px 108px 30px 72px;
+    justify-content: space-between;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    padding: 0 25px 12px;
+    background-color: #e2e5f2;
+  }
+}
+
+.selectcountries {
+  @include vp-1023 {
+    display: flex;
+    flex-direction: row;
+
+    @include vp-767 {
+      flex-direction: column;
+    }
+  }
+}
+
+.block {
+  margin-bottom: 40px;
+  width: auto;
+  max-width: 213px;
+  font-size: 20px;
+  line-height: 30px;
+  color: #444444;
+  height: fit-content;
+
+  @include vp-1023 {
+    margin-bottom: 0;
+  }
+
+  &:not(:nth-child(5n)) {
+    margin-right: 40px;
+
+    @include vp-1023 {
+      margin-right: 20px;
+    }
+
+    @include vp-767 {
+      margin-right: 0;
+    }
+  }
+
+  &:nth-child(5n) {
+    margin-left: -10px;
+
+    @include vp-1279 {
+      margin-left: 0;
+    }
+  }
+
+  @include vp-767 {
+    width: 43px;
+    height: 40px;
+    margin: 0;
+    border: solid 1px #cbced9;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+      font-size: 14px;
+      line-height: 14px;
+      margin-bottom: 0;
+    }
+  }
+
+  div {
+    padding-right: 20px;
+    box-sizing: border-box;
+
+    @include vp-1279 {
+      padding-right: 0;
+    }
+  }
+}
+
+.letter {
+  font-size: 60px;
+  line-height: 60px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  font-family: inherit;
+  margin-left: -2px;
+
+  @include vp-1279 {
+    margin-left: 0;
+  }
+
+  @include vp-1023 {
+    margin: 0;
+  }
+}
+
+.closebutton {
+  width: 103%;
+  min-width: 103%;
+  margin-left: -1.5%;
+  grid-column: 1/6;
+  min-height: 100px;
+  position: relative;
+  border: 0;
+  background-color: #d6daed;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 700;
+  border-radius: 20px;
+  box-sizing: border-box;
+  text-align: left;
+  text-align: center;
+  padding-left: 35px;
+  padding-top: 5px;
+  font-family: inherit;
+
+  @include vp-1023 {
+    grid-column: 1/7;
+    max-width: 95%;
+    min-width: 95%;
+    margin-left: 10px;
+    padding-top: 0;
+  }
+
+  @include vp-767 {
+    min-height: 39px;
+    border-radius: 20px;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 7px 5px 4px 37px;
+    margin-bottom: 16px;
+    font-family: inherit;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 3px;
+    background-color: #192144;
+    top: 49%;
+
+    transform: rotate(45deg) translate(-29px, 29px);
+    border-radius: 2px;
+
+    @include vp-767 {
+      width: 17px;
+      height: 1px;
+      transform: rotate(45deg) translate(-19px, 19px);
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 3px;
+    background-color: #192144;
+    top: 49%;
+    transform: rotate(-45deg) translate(-101px, -101px);
+    border-radius: 2px;
+
+    @include vp-767 {
+      height: 1px;
+      width: 17px;
+      transform: rotate(-45deg) translate(-77px, -77px);
+    }
+  }
+}
+
+.selected {
+  display: none;
+
+  @include vp-1023 {
+    display: block;
+    grid-column: 6/7;
+    grid-row: 2/8;
+    padding-left: 4%;
+    max-width: 197px;
+    margin-left: auto;
+    padding-left: 28px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  @include vp-767 {
+    padding-left: 24px;
+    margin-left: 0;
+    margin-bottom: 6px;
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 30px;
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+}
+
+.button__headerclose {
+  content: "Фильтрация по странам:";
+  opacity: 1;
+  background-color: #edeff6;
+  height: fit-content;
+  width: fit-content;
+  top: 0;
+  left: 0;
+  background: url("../../images/filter.svg") no-repeat;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #192144;
+  text-transform: uppercase;
+  border: 0;
+  cursor: pointer;
+  padding-left: 45px;
+  position: relative;
+  letter-spacing: -0.1px;
+  font-family: inherit;
+
+  @include vp-1023 {
+    font-size: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 18px;
+    background-size: 15px 10px;
+    text-align: left;
+    letter-spacing: 0;
+    position: relative;
+    padding-left: 28px;
+    padding-right: 50px;
+    width: 100%;
+    background-position: 0 5px;
+
+    &::before {
+      content: "";
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      right: 4px;
+      top: 0;
+      background: url(../../images/icon-close-countries.svg) no-repeat #E2E5F2;
+      background-size: 15px 15px;
+    }
+  }
+
+  div {
+    padding-left: 28px;
+  }
+
+  &::after {
+    @include vp-1023 {
+      display: block;
+      content: "свернуть";
+      font-size: 20px;
+      text-transform: uppercase;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+      background-color: #e2e5f2;
+      left: 0;
+      background: url(../../images/icon-close-countries.svg) no-repeat #edeff6;
+      background-position: right 0 top 50%;
+      top: 0;
+      z-index: 2;
+
+      @include vp-1023 {
+        background-position: right 0 top 0;
+        padding-right: 33px;
+      }
+
+      @include vp-767 {
+        display: none;
+      }
+    }
+  }
+}
+
+.loading_message {
+  padding: 10px;
+
+  @include vp-1023 {
+    display: none;
+  }
+
+  &--mobile {
+    display: none;
+
+    @include vp-1023 {
+      display: block;
+    }
+  }
+}
+
+.error_message {
+  padding: 10px;
+
+  @include vp-1023 {
+    display: none;
+  }
+
+  &--mobile {
+    display: none;
+
+    @include vp-1023 {
+      display: block;
+    }
+  }
+}

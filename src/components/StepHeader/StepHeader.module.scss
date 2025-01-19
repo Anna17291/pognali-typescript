@@ -1,0 +1,124 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.step__header {
+    display: flex;
+    gap: 102px;
+    padding-bottom: 55px;
+    border-bottom: 1px solid $solitude-color;
+
+    @include vp-1023 {
+        grid-template-columns: 100%;
+        padding-bottom: 33px;
+    }
+
+    @include vp-767 {
+        padding-bottom: 24px;
+        border: 0;
+    }
+}
+
+.step__header h3 {
+    letter-spacing: 0;
+
+    @include vp-1023 {
+        margin-bottom: 70px;
+    }
+
+    @include vp-767 {
+        font-size: 20px;
+        line-height: 20px;
+        margin-bottom: 15px;
+    }
+}
+
+.step__header p {
+    max-width: 659px;
+    letter-spacing: 0;
+    margin-left: 2px;
+
+    @include vp-1023 {
+        max-width: 505px;
+    }
+
+    @include vp-767 {
+        font-size: 13px;
+        line-height: 22px;
+    }
+}
+
+.step__header ul {
+    list-style-type: disc;
+
+    @include vp-1023 {
+        display: none;
+    }
+}
+
+.step__title {
+    @include primary-bold(36px, 36px);
+
+    display: flex;
+    margin: 0;
+    margin-bottom: 33px;
+    color: $catalina-blue-color;
+    flex-wrap: wrap;
+}
+
+.step__explanation {
+    @include primary-regular(20px, 24px);
+    display: flex;
+    color: $charcoal-color;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.step__points {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    padding-left: 35px;
+    padding-right: 12px;
+    list-style-type: disc;
+    margin: 0;
+    padding-top: 5px;
+}
+
+.step__points li::marker {
+    color: $catalina-blue-color;
+    font-size: 20px;
+    box-sizing: border-box
+}
+
+.step__item {
+    @include primary-regular(20px, 24px);
+
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.6;
+    color: $black-color;
+    flex-wrap: wrap;
+    padding-left: 30px;
+    box-sizing: border-box;
+}
+
+.step__item--active {
+    opacity: 1;
+}
+
+.stepheader__third {
+
+    @include vp-1023 {
+        padding-bottom: 8px;
+    }
+
+    @include vp-767 {
+        padding-bottom: 23px;
+    }
+}
+
+.stepheader__third h3 {
+    @include vp-767 {
+        max-width: 125px;
+    }
+}

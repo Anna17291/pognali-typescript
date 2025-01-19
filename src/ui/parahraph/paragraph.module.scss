@@ -1,0 +1,15 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+p {
+  color: #444444;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0;
+  letter-spacing: -0.1px;
+
+  @include vp-767 {
+    font-size: 13px;
+    line-height: 22px;
+  }
+}

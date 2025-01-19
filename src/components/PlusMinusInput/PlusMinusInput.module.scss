@@ -1,0 +1,36 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
+.plus__wrapper {
+    display: grid;
+    grid-template-columns: 60px 60px 60px;
+    width: 180px;
+    height: 70px;
+    border: 1px solid $link-water-color;
+    border-radius: 4px;
+}
+
+.plus__input {
+    @include primary-medium(20px, 18px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 60px;
+    height: 70px;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.plus__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 70px;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}

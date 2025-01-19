@@ -1,0 +1,84 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.container {
+  width: 72%;
+  max-width: 951px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  min-height: 80px;
+  box-sizing: border-box;
+
+  @include vp-1023 {
+    width: 100%;
+    padding: 20px 10px 20px 70px;
+  }
+
+  @include vp-767 {
+    min-height: 50px;
+    padding: 10px;
+  }
+}
+
+.button {
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 0;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #1D2E5B;
+  padding: 20px 50px 20px 47px;
+  box-sizing: border-box;
+  position: relative;
+  font-family: inherit;
+
+  @include vp-1023 {
+    padding: 20px 50px;
+  }
+
+  @include vp-767 {
+    font-size: 17px;
+    line-height: 30px;
+    min-height: 40px;
+    padding: 10px 10px 10px 55px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 26px;
+    border-radius: 2px;
+    top: 48%;
+    transform: translateY(-50%);
+    left: 9px;
+    background-color: #1D2E5B;
+
+    @include vp-767 {
+      width: 1px;
+      height: 18px;
+      left: 29px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 26px;
+    height: 2px;
+    border-radius: 2px;
+    top: 48%;
+    transform: translateY(-50%);
+    left: -3px;
+    background-color: #1D2E5B;
+
+    @include vp-767 {
+      width: 18px;
+      height: 1px;
+      left: 21px;
+    }
+  }
+}

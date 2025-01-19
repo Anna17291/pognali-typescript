@@ -1,0 +1,75 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contacts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+}
+
+.logo {
+    @include vp-1023 {
+        display: none;
+    }
+}
+
+.logo-small {
+    display: none;
+    @include vp-1023 {
+        display: block;
+    }
+}
+
+.address {
+    @include vp-1023 {
+        display: none;
+    }
+}
+
+.social {
+    @include vp-767 {
+        display: none;
+    }
+}
+
+.phone-button {
+    @include vp-767 {
+        display: none;
+    }
+}
+
+.error {
+    margin: 0 auto;
+    padding: 60px 20px;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+}
+  
+.error__text {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 70px;
+    font-size: 30px;
+    color: $primary-color;
+}
+  
+.error__button {
+    display: block;
+    margin: 0 auto;
+    padding: 20px 36px;
+    font-size: 18px;
+    background-color: $main-color;
+    color: $secondary-background-color;
+    text-transform: uppercase;
+    border-radius: 8px;
+    cursor: pointer;
+}

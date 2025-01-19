@@ -1,0 +1,56 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.logofooter__wrapper {
+    position: absolute;
+    display: block;
+    left: 60px;
+    top: calc(50% - 25px);
+    z-index: 11;
+
+    @include vp-1023 {
+        width: 166px;
+        height: 42px;
+        z-index: 11;
+        left: 40px;
+        top: calc(50% - 19px);
+
+        img {
+            width: 166px;
+            height: 42px;
+        }
+    }
+
+    @include vp-767 {
+        position: initial;
+        width: 96px;
+        height: 15px;
+
+        img {
+            width: 96px;
+            height: 15px;
+        }
+    }
+}
+
+.logofooter__wrapper--absolute {
+    position: absolute;
+    left: 0;
+    top: calc(50% + 3px);
+}
+
+.logofooter__wrapper img:first-child {
+    display: block;
+
+    @include vp-767 {
+        display: none;
+    }
+}
+
+.logofooter__wrapper img:not(:first-child) {
+    display: none;
+
+    @include vp-767 {
+        display: block;
+    }
+}

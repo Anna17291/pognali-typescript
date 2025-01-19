@@ -1,0 +1,57 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  user-select: none;
+}
+
+.checkboxInput {
+  display: none;
+}
+
+.checkboxCustom {
+  width: 24px;
+  height: 24px;
+  border: none;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  transition: all 0.3s ease;
+  background-color: #FFFFFF;
+
+  @include vp-767 {
+    width: 18px;
+    height: 18px;
+    margin-right: 9px;
+  }
+}
+
+.checkIcon {
+  width: 14px;
+  height: 14px;
+}
+
+.checkboxLabel:hover,
+.checkboxLabel:focus {
+  opacity: 0.6;
+}
+
+.checkboxLabel:active {
+  opacity: 0.3;
+}
+
+.checkboxLabel:hover .checkboxCustom {
+  border-color: #959BB2;
+}
+
+.checkboxLabel input:focus + .checkboxCustom {
+  outline: 2px solid #959BB2;
+  outline-offset: 2px;
+}
