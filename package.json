@@ -66,6 +66,7 @@
     "node": "18.20.4"
   },
   "devDependencies": {
-    "@types/react-date-range": "^1.4.9"
+    "@types/react-date-range": "^1.4.9",
+    "gh-pages": "^6.3.0"
   }
 }
