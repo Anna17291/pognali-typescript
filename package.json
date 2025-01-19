@@ -1,8 +1,8 @@
 {
   "name": "intern-pognali-3-2",
-  "homepage": "https://Anna17291.github.io/pognali-typescript/",
+  "homepage": "https://anna17291.github.io/pognali-typescript/",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
